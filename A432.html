@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Triangles and Tuning Standards</title>
+
+ <style>
+  body {
+    font-size: 16px;
+    font-weight: normal;
+  }
+ 
+  h1 {
+      font-size: 1.25rem;
+      font-weight: normal;
+  }
+ 
+  h2 {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+ 
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+ 
+  .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 300px;
+    padding: 0 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+ 
+  .column img {
+    margin-right: 20px;
+    align-self: flex-start;
+  }
+ 
+  .container .column:nth-child(2) {
+    border-left: 1px solid black;
+    padding-left: 15px;
+    min-height: 390px;
+  }
+ 
+  @media screen and (max-width: 600px) {
+    .container {
+      flex-direction: column;
+    }
+   
+    .container .column:nth-child(2) {
+      border-left: none;
+      padding-left: 0;
+      min-height: 300px;
+    }
+  }
+ 
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+ 
+  .mjx-chtml {
+    font-size: 1rem !important;
+    line-height: inherit !important;
+  }
+</style>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <h1>Triangles and Tuning Standards</h1>
+    <p>An <a href="https://www.izotope.com/en/learn/tuning-standards-explained.html">article at izotope.com</a> about the purported benefits of tuning to 432 Hz rather than the
+current standard A440 states that "an equilateral triangle whose area and perimeter are equal has a square root of 432." Below we examine the math behind that statement.</p>
+<noscript>
+<p>But if you don't have JavaScript enabled the math won't look right!</p>
+</noscript>
+    <div class="container">
+      <div class="column">
+        <h2>First, we use the Pythagorean theorem, <i>the square upon the hypotenuse of a right triangle is equal to the sum of the squares upon the other two sides</i>, to find the
+altitude, or height (h), of an equilateral triangle.</h2>      
+       
+<svg width="150" height="150">
+  <title>30-60-90 Triangle</title>
+  <desc>An SVG diagram of a right triangle with sides labled s, s/2 and h</desc>
+  <line x1="25" y1="125" x2="75" y2="125" stroke="black" />
+  <line x1="75" y1="25" x2="75" y2="125" stroke="black" stroke-dasharray="5,5"/>
+  <line x1="25" y1="125" x2="75" y2="25" stroke="black" />
+  <text x="80" y="95">h</text>
+  <text x="40" y="140">s/2</text>
+  <text x="40" y="65">s</text>
+ </svg>
+     
+        <div>
+          <p>\(h^2 + (\frac{S}{2})^2 = s^2\)</p>
+          <p>\(h^2 = s^2 - (\frac{S}{2})^2\)</p>
+          <p>\(h^2 = \frac{3}{4}s^2\)</p>
+          <p>\(h = \frac{\sqrt{3}}{2}s\)</p>
+        </div>
+      </div>
+      <div class="column">
+        <h2>Next, we find the area of the triangle by using the formula <i>area equals one half base times height</i>.</h2>
+
+<svg width="150" height="150">
+ 
+  <title>Equilateral triangle</title>  
+   <desc>An equilateral triangle with 3 sides labled s and the height labeled h</desc>
+   
+  <polygon points="75,25 25,125 125,125" stroke="black" fill="none"/>
+  <line x1="75" y1="25" x2="75" y2="125" stroke="black" stroke-dasharray="5,5"/>
+  <text x="77" y="90">h</text>
+  <text x="40" y="75">s</text>
+  <text x="102" y="75">s</text>
+  <text x="70" y="138">s</text>
+</svg>
+
+<div>
+     
+  <p>\(a = \frac{1}{2}s * (\frac{\sqrt{3}}{2})s\)</p>
+  <p>\(a = \frac{\sqrt{3}}{4}s^2\)</p>
+</div>
+</div>
+</div>
+<h2>Now we set the area of the triangle, \(\frac{\sqrt{3}}{4}s^2\), equal to the perimeter which is s + s + s, or 3s, and then solve for s.</h2>
+<p>\(3s = \frac{\sqrt{3}}{4}s^2\)</p>
+<p>\(3 = \frac{\sqrt{3}}{4}s\)</p>
+<p>\(s = \frac{4}{\sqrt{3}} * 3 = \frac{12}{\sqrt{3}}\)</p>
+<p>Substituting this value of s into the expression for the area we derived above gives us:</p>
+<p>a = \(\frac{\sqrt{3}}{4}\)\(\left(\frac{12}{\sqrt{3}}\right)^2\) = \(\frac{\sqrt{3}}{4}\)\(\frac{144}{3}\) = \(12\sqrt{3}\)</p>
+<p>(The perimeter is three times the side, or 3 *  \(\frac{12}{\sqrt(3)}\) = \(\frac{36}{\sqrt(3)}\) which also equals \(12 \sqrt{3}\) as you can see by multipying \(\frac
+{\sqrt{3}}{\sqrt{3}}\) times \(\frac{36}{\sqrt3}\)).</p>
+
+<h2>The next question: is \(12\sqrt{3}\) equal to \(\sqrt{432}\)?</h2>
+<p>To determine that we factor 432 into \(2*2*2*2*3*3*3\) or \(4^2*3^2*3\) and take the square root.</p>
+<p>\(\sqrt{4^2*3^2*3}\)  =  \((4 * 3) * \sqrt{3}\) which equals \(12 \sqrt{3}\)</p>
+
+<p>So, while the original statement, "an equilateral triangle whose area and perimeter are equal has a square root of 432", is vague and imprecise, it is true that, for an eqilateral
+triangle which has equal numerical values for both its area and perimeter (the area and perimeter cannot actually be "equal" since one has a unit of length and the other a unit of
+area) that numerical value is the square root of 432, namely \(12 \sqrt{3}\).</p>
+</body>
+</html>
