@@ -1,2 +1,3 @@
 # GPT-HTML
-I asked ChatGPT to write a web page for me. Explicit instructions were necessary to stop ChatGPT from making changes I didn't want. Eventually i had to work around the fact that the file became too long for a single prompt and response.
+A friend asked me a math question and after I'd worked it out I wanted a more attractive presentation than what I'd scrawled with my pencil. I've been playing around with ChatGPT and I asked ChatGPT to write a web page for me. I know a bit about HTML but I didn't know about MathJax or how to embed SVG or the relative sizing of text. It was very much an iterative process. Explicit instructions were necessary to stop ChatGPT from making changes I didn't want. Eventually I had to work around the fact that the file became too long for a single prompt and response.
+It was a very useful tool.
